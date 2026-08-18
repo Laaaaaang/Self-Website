@@ -8,3 +8,12 @@ yarn-error.log*
 pnpm-debug.log*
 .DS_Store
 *.tsbuildinfo
+AGENTS.md
+CLAUDE.md
+CV.pdf
+
+# Keep only the locally bundled font that the site imports.
+筑紫明朝体/*
+!筑紫明朝体/骨董款 Antique ★★★/
+筑紫明朝体/骨董款 Antique ★★★/*
+!筑紫明朝体/骨董款 Antique ★★★/FOT-TsukuAntiqueSMinStd-L.ttf
