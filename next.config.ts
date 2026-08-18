@@ -6,6 +6,12 @@ const withMDX = createMDX({
 });
 
 const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? "",
+  images: {
+    unoptimized: true
+  },
   pageExtensions: ["ts", "tsx", "mdx"]
 };
 

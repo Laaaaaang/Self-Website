@@ -2,12 +2,13 @@ import Image from "next/image";
 
 import { PageIntro } from "@/components/sections/page-intro";
 import { selfDetails, selfOpening } from "@/content/site-data";
+import { sitePath } from "@/lib/site-path";
 
 export default function SelfPage() {
   return (
     <main className="relative isolate overflow-hidden text-[var(--ink)] pb-24 md:pb-32">
       <div aria-hidden="true" className="absolute inset-0 -z-10">
-        <Image src="/images/4.jpg" alt="" fill sizes="100vw" className="object-cover object-center" />
+        <Image src={sitePath("/images/4.jpg")} alt="" fill sizes="100vw" className="object-cover object-center" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(242,240,234,0.56)_0%,rgba(242,240,234,0.72)_52%,rgba(242,240,234,0.94)_100%)]" />
       </div>
 
@@ -23,7 +24,7 @@ export default function SelfPage() {
         <figure className="col-span-full md:col-start-2 md:row-span-2 md:col-span-3">
           <div className="relative aspect-[3/4] overflow-hidden bg-[#e7e2da]">
             <Image
-              src="/images/3.jpg"
+              src={sitePath("/images/3.jpg")}
               alt="Portrait of the site author."
               fill
               sizes="(min-width: 768px) 24vw, 100vw"
@@ -51,7 +52,7 @@ export default function SelfPage() {
           </dl>
 
           <div className="mt-10">
-            <a href="/CV.pdf" target="_blank" rel="noreferrer" className="ink-link tiny-label text-[var(--ink)]">
+            <a href={sitePath("/CV.pdf")} target="_blank" rel="noreferrer" className="ink-link tiny-label text-[var(--ink)]">
               Download CV (PDF)
             </a>
           </div>

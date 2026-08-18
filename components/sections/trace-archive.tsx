@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 
 import { traceCollections, tracePhotos, type TraceLayout } from "@/content/traces";
+import { sitePath } from "@/lib/site-path";
 
 type Filter = "all" | `collection:${string}` | `tag:${string}`;
 
@@ -84,7 +85,7 @@ export function TraceArchive() {
                 <figure key={photo.id} className={layout === "sequence" ? "site-grid gap-y-5" : undefined}>
                   <div className={layout === "sequence" ? "col-span-full md:col-start-2 md:col-span-8" : undefined}>
                     <div className={`relative overflow-hidden bg-[#e7e2da] ${orientationClasses[photo.orientation]}`}>
-                      <Image src={photo.src} alt={photo.alt} fill sizes={layout === "sequence" ? "(min-width: 768px) 66vw, 100vw" : "(min-width: 1280px) 28vw, (min-width: 768px) 42vw, 100vw"} className="object-cover" />
+                      <Image src={sitePath(photo.src)} alt={photo.alt} fill sizes={layout === "sequence" ? "(min-width: 768px) 66vw, 100vw" : "(min-width: 1280px) 28vw, (min-width: 768px) 42vw, 100vw"} className="object-cover" />
                     </div>
                   </div>
                   <figcaption className={layout === "sequence" ? "col-span-full md:col-start-10 md:col-span-2 md:pt-8" : "mt-4"}>

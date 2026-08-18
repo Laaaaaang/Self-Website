@@ -1,5 +1,6 @@
 import { PageIntro } from "@/components/sections/page-intro";
 import { cvSections } from "@/content/site-data";
+import { sitePath } from "@/lib/site-path";
 
 export default function CvPage() {
   return (
@@ -21,7 +22,7 @@ export default function CvPage() {
                   {section.items.map((item) => (
                     <li key={item}>
                       {section.title === "Materials" && item === "Download CV (PDF)" ? (
-                        <a href="/CV.pdf" download className="ink-link text-[var(--ink)]">
+                        <a href={sitePath("/CV.pdf")} download className="ink-link text-[var(--ink)]">
                           {item}
                         </a>
                       ) : (

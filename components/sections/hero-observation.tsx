@@ -6,6 +6,8 @@ import { useRef } from "react";
 
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 
+import { sitePath } from "@/lib/site-path";
+
 import { VerticalLabel } from "@/components/typography/vertical-label";
 
 export function HeroObservation() {
@@ -30,7 +32,7 @@ export function HeroObservation() {
         className="absolute -inset-6 -z-10"
       >
         <Image
-          src="/images/_DSC7906.jpg"
+          src={sitePath("/images/_DSC7906.jpg")}
           alt=""
           fill
           preload

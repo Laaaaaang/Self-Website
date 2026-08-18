@@ -7,6 +7,7 @@ import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 
 import { SectionMarker } from "@/components/typography/section-marker";
+import { sitePath } from "@/lib/site-path";
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
@@ -31,7 +32,7 @@ export function VisibleLatent() {
         style={reduceMotion ? undefined : { opacity: backgroundOpacity, scale: backgroundScale, filter: backgroundFilter }}
         className="pointer-events-none absolute -inset-6 -z-10"
       >
-        <Image src="/images/2.jpg" alt="" fill sizes="100vw" className="object-cover object-center" />
+        <Image src={sitePath("/images/2.jpg")} alt="" fill sizes="100vw" className="object-cover object-center" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(242,240,234,0.52)_0%,rgba(242,240,234,0.66)_52%,rgba(242,240,234,0.88)_100%)]" />
       </motion.div>
 
@@ -58,7 +59,7 @@ export function VisibleLatent() {
           >
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
-                src="/images/_DSC8858.jpg"
+                src={sitePath("/images/_DSC8858.jpg")}
                 alt="Visible view of an interactive art installation."
                 fill
                 sizes="(min-width: 768px) 70vw, 100vw"
@@ -71,7 +72,7 @@ export function VisibleLatent() {
                 className="absolute inset-0"
               >
                 <Image
-                  src="/images/_DSC8883.jpg"
+                  src={sitePath("/images/_DSC8883.jpg")}
                   alt="Alternate latent view of the interactive art installation."
                   fill
                   sizes="(min-width: 768px) 70vw, 100vw"

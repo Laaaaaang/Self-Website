@@ -7,6 +7,7 @@ import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 
 import { SectionMarker } from "@/components/typography/section-marker";
+import { sitePath } from "@/lib/site-path";
 
 const revealWord = {
   initial: { opacity: 0.32 },
@@ -32,7 +33,7 @@ export function ThesisSection() {
         style={reduceMotion ? undefined : { opacity: backgroundOpacity, scale: backgroundScale, filter: backgroundFilter }}
         className="pointer-events-none absolute -inset-6 -z-10"
       >
-        <Image src="/images/_DSC9498.jpg" alt="" fill sizes="100vw" className="object-cover object-center" />
+        <Image src={sitePath("/images/_DSC9498.jpg")} alt="" fill sizes="100vw" className="object-cover object-center" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(242,240,234,0.52)_0%,rgba(242,240,234,0.66)_52%,rgba(242,240,234,0.88)_100%)]" />
       </motion.div>
 
